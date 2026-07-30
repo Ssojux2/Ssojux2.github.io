@@ -37,7 +37,7 @@ export const PRODUCTS = Object.freeze([
       'LangChain · LlamaIndex 로 LLM 애플리케이션 구조 설계',
       '문서 임베딩부터 검색 품질 개선까지 RAG 파이프라인 구축',
       'Tool calling · 멀티스텝 Agent 설계와 디버깅',
-      'sLLM(SLM) 온디바이스 에이전트, LLM Safety 와 평가',
+      'SLM 온디바이스 에이전트, LLM Safety 와 평가',
     ],
     format: '2일 집중 워크숍 · 3~11개월 사내 정규 과정 · PoC 병행 운영',
     highlight: true,
