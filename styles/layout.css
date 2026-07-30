@@ -1,0 +1,335 @@
+/* 페이지 골격 — 헤더 · 섹션 · 히어로 · 그리드 · 푸터 */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+/* ---------- 헤더 ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background-color: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  height: 100%;
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0; /* 좁은 화면에서 헤더가 뷰포트를 밀어내지 않도록 축소를 허용한다 */
+  overflow: hidden;
+  color: var(--color-text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.site-header__brand:hover {
+  text-decoration: none;
+}
+
+.site-header__brand-sub {
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+  font-weight: 500;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.site-nav__link {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.site-nav__link:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-header__actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    display: none;
+  }
+}
+
+/* ---------- 섹션 ---------- */
+
+.section {
+  padding-block: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.section--surface {
+  background-color: var(--color-surface);
+}
+
+.section--plain {
+  border-top: none;
+}
+
+.section__head {
+  max-width: 62ch;
+  margin-bottom: var(--space-6);
+}
+
+.section__eyebrow {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section__title {
+  font-size: var(--text-2xl);
+}
+
+.section__lead {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+/* ---------- 히어로 ---------- */
+
+.hero {
+  padding-block: var(--space-8) var(--space-7);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.hero__role {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--color-primary-soft);
+  border-radius: var(--radius-pill);
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.hero__title {
+  font-size: var(--text-4xl);
+  letter-spacing: -0.03em;
+}
+
+.hero__title-name {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.hero__summary {
+  margin-top: var(--space-5);
+  display: grid;
+  gap: var(--space-2);
+  max-width: 54ch;
+  color: var(--color-text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  margin-top: var(--space-5);
+  color: var(--color-text-subtle);
+  font-size: var(--text-sm);
+}
+
+.hero__portrait {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-surface);
+}
+
+.hero__portrait img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 860px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+
+  .hero__portrait {
+    order: -1;
+    max-width: 260px;
+  }
+
+  .hero__title {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 520px) {
+  .hero__stats {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+}
+
+/* 소형 단말(iPhone SE 등) — 여백과 제목 크기를 줄여 한 줄에 담기는 글자 수를 확보한다 */
+@media (max-width: 420px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+
+  .site-header__brand-sub {
+    display: none;
+  }
+
+  .hero__title {
+    font-size: var(--text-2xl);
+  }
+
+  .section__title {
+    font-size: var(--text-xl);
+  }
+}
+
+/* ---------- 그리드 ---------- */
+
+/* 대표 로고 12개가 데스크톱에서 6 + 6 으로 고르게 떨어지도록 최소폭을 잡았다 */
+.logo-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: var(--space-3);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-5);
+}
+
+.lecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-4);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.request-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .about-grid,
+  .request-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid,
+  .lecture-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- 푸터 ---------- */
+
+.site-footer {
+  padding-block: var(--space-7) var(--space-6);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.site-footer__note {
+  color: var(--color-text-subtle);
+  font-size: var(--text-sm);
+}
