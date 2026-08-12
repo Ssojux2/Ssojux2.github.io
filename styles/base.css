@@ -38,6 +38,12 @@ p {
   margin: 0;
 }
 
+/* dd 의 기본 margin-inline-start(40px)를 지운다 — 지우지 않으면 dt 와 좌측선이 어긋난다 */
+dl,
+dd {
+  margin: 0;
+}
+
 ul,
 ol {
   margin: 0;
