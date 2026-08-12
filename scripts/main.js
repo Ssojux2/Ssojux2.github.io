@@ -4,7 +4,7 @@
 
 import { LINKS, PROFILE, YOUTUBE, WORK_EXPERIENCE, EDUCATION, ACHIEVEMENTS } from './data/profile.js';
 import { CATEGORIES, LECTURES, FEATURED_LOGOS } from './data/lectures.js';
-import { PRODUCTS } from './data/products.js';
+import { ADDITIONAL_SERVICES, PRODUCTS } from './data/products.js';
 import { ALL_CATEGORY, applyFilters, countByCategory, summarize } from './filters.js';
 import {
   renderCategoryChips,
@@ -14,7 +14,7 @@ import {
   renderStats,
   updateChipState,
 } from './render/lectures.js';
-import { renderProducts } from './render/products.js';
+import { renderAdditionalServices, renderProducts } from './render/products.js';
 import {
   renderAchievements,
   renderEducationTimeline,
@@ -122,6 +122,7 @@ function init() {
   renderStats(byId('hero-stats'), summary);
   renderLogoStrip(byId('logo-strip'), FEATURED_LOGOS);
   renderProducts(elements.productGrid, PRODUCTS, LECTURES);
+  renderAdditionalServices(byId('product-aside'), ADDITIONAL_SERVICES);
 
   renderCategoryChips(
     elements.categoryChips,

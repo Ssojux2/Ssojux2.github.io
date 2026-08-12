@@ -285,6 +285,21 @@
   margin-top: auto;
 }
 
+/* 세 과정 외 별도 협의 항목 안내 (그리드 아래 한 줄) */
+.product-aside {
+  margin-top: var(--space-5);
+  color: var(--color-text-subtle);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.product-aside__link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---------- 필터 ---------- */
 
 .filter-bar {

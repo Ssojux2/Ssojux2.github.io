@@ -67,3 +67,12 @@ export function renderProducts(container, products, lectures) {
   const ordered = [...products].sort((a, b) => a.order - b.order);
   container.replaceChildren(...ordered.map((product) => productCard(product, lectures)));
 }
+
+/** 세 과정 외 별도 협의 항목 — 그리드 아래 한 줄 안내 */
+export function renderAdditionalServices(container, service) {
+  container.replaceChildren(
+    service.text,
+    ' ',
+    el('a', { class: 'product-aside__link', href: service.href }, [service.linkLabel]),
+  );
+}

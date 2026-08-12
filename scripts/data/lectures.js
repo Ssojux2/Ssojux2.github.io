@@ -11,11 +11,8 @@
 
 export const CATEGORIES = Object.freeze([
   { id: 'foundation', label: '딥러닝 기초', labelEn: 'Deep Learning Foundations' },
-  { id: 'llm', label: 'LLM · Agent', labelEn: 'LLM & AI Agent' },
-  { id: 'genai', label: '생성형 AI', labelEn: 'Generative AI' },
-  { id: 'vision', label: '비전 · 이상탐지', labelEn: 'Vision & Anomaly Detection' },
-  { id: 'mentoring', label: '멘토링 · 강사양성', labelEn: 'Mentoring & Train-the-Trainer' },
-  { id: 'arttech', label: 'Art × Tech', labelEn: 'Art × Tech' },
+  { id: 'llm', label: 'LLM Agent', labelEn: 'LLM & AI Agent' },
+  { id: 'genai', label: 'Gen AI 콘텐츠', labelEn: 'Generative AI Content' },
 ]);
 
 export const CATEGORY_IDS = Object.freeze(CATEGORIES.map((category) => category.id));
@@ -87,7 +84,7 @@ export const LECTURES = Object.freeze([
     startedAt: '2025-04',
     topic: 'CV Anomaly Detection & Deep Learning',
     topicKo: '컴퓨터 비전 이상탐지와 딥러닝',
-    category: 'vision',
+    category: 'foundation',
     logos: ['samsung-electronics.png'],
   },
   {
@@ -132,7 +129,7 @@ export const LECTURES = Object.freeze([
     startedAt: '2024-11',
     topic: 'Deep Learning Basics and Projects',
     topicKo: '딥러닝 기초와 프로젝트',
-    category: 'mentoring',
+    category: 'foundation',
     logos: ['moel-kdt.png'],
   },
   {
@@ -143,7 +140,7 @@ export const LECTURES = Object.freeze([
     startedAt: '2024-05',
     topic: 'ML, DL Project Mentor',
     topicKo: '머신러닝 · 딥러닝 프로젝트 멘토링',
-    category: 'mentoring',
+    category: 'foundation',
     logos: ['hyundai-mobis.png'],
   },
   {
@@ -264,7 +261,7 @@ export const LECTURES = Object.freeze([
     startedAt: '2022-02',
     topic: 'Computer Vision & Deep Learning',
     topicKo: '컴퓨터 비전과 딥러닝',
-    category: 'vision',
+    category: 'foundation',
     logos: ['samsung-electro-mechanics.png'],
   },
   {
@@ -275,7 +272,7 @@ export const LECTURES = Object.freeze([
     startedAt: '2021-09',
     topic: 'Art & Tech with Deep Learning',
     topicKo: '딥러닝으로 만드는 예술과 기술',
-    category: 'arttech',
+    category: 'genai',
     logos: ['art-center-nabi.png'],
   },
   {
@@ -363,7 +360,7 @@ export const LECTURES = Object.freeze([
     startedAt: '2019-07',
     topic: 'Deep Learning Projects',
     topicKo: '딥러닝 프로젝트',
-    category: 'mentoring',
+    category: 'foundation',
     logos: ['hyundai-wia.png'],
   },
   {

@@ -87,7 +87,7 @@ describe('filterByCategory', () => {
   });
 
   test('일치하는 항목이 없으면 빈 배열이다', () => {
-    assert.deepEqual(filterByCategory(SAMPLE, 'arttech'), []);
+    assert.deepEqual(filterByCategory(SAMPLE, 'genai'), []);
   });
 });
 

@@ -79,11 +79,11 @@ describe('강의 이력 데이터', () => {
 });
 
 describe('제공 강의 데이터', () => {
-  test('여섯 개 과정이 정의되어 있고 order 가 1..6 이다', () => {
-    assert.equal(PRODUCTS.length, 6);
+  test('세 개 과정이 정의되어 있고 order 가 1..3 이다', () => {
+    assert.equal(PRODUCTS.length, 3);
     assert.deepEqual(
       PRODUCTS.map((product) => product.order).sort((a, b) => a - b),
-      [1, 2, 3, 4, 5, 6],
+      [1, 2, 3],
     );
   });
 
@@ -95,6 +95,14 @@ describe('제공 강의 데이터', () => {
         `${product.id}: 대표 고객사를 계산할 이력이 없음`,
       );
     }
+  });
+
+  // 카드(3개)와 이력 필터 칩(3개)이 다시 어긋나면 페이지 안에서 분류 체계가 둘로 갈린다.
+  test('과정과 카테고리가 1:1로 대응한다', () => {
+    assert.deepEqual(
+      PRODUCTS.map((product) => product.category).sort(),
+      [...CATEGORY_IDS].sort(),
+    );
   });
 
   test('필수 서술 필드가 채워져 있다', () => {
