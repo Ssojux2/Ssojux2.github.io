@@ -31,7 +31,7 @@ export const PROFILE = Object.freeze({
   summary: [
     '삼성, 카카오, LG, 현대 등 다수의 기업 및 기관에서 딥러닝 강의를 맡아온 소준섭입니다.',
     '기술을 쉽고 재밌게 전달하며, 비전공자 및 다른 분야 사람들도 쉽게 입문할 수 있도록 강의합니다.',
-    'Generative AI와 컴퓨터 음악을 연구하고, 찹쓰 대표로서 기술과 예술이 공존하는 공간을 만들어가고 있습니다.',
+    'Generative AI와 컴퓨터 음악을 연구하고, 블루펭귄 대표로서 기술과 예술이 공존하는 공간을 만들어가고 있습니다.',
   ],
   researchInterests: [
     { ko: '생성모델', en: 'Generative AI Models' },
@@ -56,8 +56,8 @@ export const YOUTUBE = Object.freeze({
 export const WORK_EXPERIENCE = Object.freeze([
   {
     role: 'CEO',
-    org: '찹쓰',
-    orgEn: 'Chops',
+    org: '블루펭귄',
+    orgEn: 'Blue Penguin',
     period: '2023.06 – 현재',
     ongoing: true,
     highlights: [
@@ -66,6 +66,14 @@ export const WORK_EXPERIENCE = Object.freeze([
       '커뮤니티 공간 운영',
       '유튜브 강의 채널 운영',
     ],
+  },
+  {
+    role: '강사',
+    roleEn: 'Instructor',
+    org: '찹쓰',
+    orgEn: 'Chops',
+    period: '2023.06 – 현재',
+    ongoing: true,
   },
   {
     role: '머신러닝 엔지니어',
