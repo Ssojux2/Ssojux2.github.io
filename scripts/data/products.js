@@ -69,7 +69,7 @@ export const PRODUCTS = Object.freeze([
  * 카드로 분리하지 않고 그리드 아래 한 줄로만 안내한다.
  */
 export const ADDITIONAL_SERVICES = Object.freeze({
-  text: '이 외에도 사내 AI 과제 프로젝트 멘토링과 강사 양성 과정, 블루펭귄을 통한 AI 컨설팅 · Art × Tech 전시 기획을 진행합니다.',
+  text: '이 외에도 사내 AI 과제 프로젝트 멘토링과 강사 양성 과정, 찹쓰를 통한 AI 컨설팅 · Art × Tech 전시 기획을 진행합니다.',
   linkLabel: '문의하기',
   href: '#request',
 });

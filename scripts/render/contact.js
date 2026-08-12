@@ -81,7 +81,6 @@ export function renderFooterLinks(container, links) {
     { label: '유튜브 — 찹쓰', href: links.youtube },
     { label: '링크트리', href: links.linktree },
     { label: '인스타그램', href: links.instagram },
-    { label: '블루펭귄', href: links.bluePenguin },
   ];
 
   container.replaceChildren(
